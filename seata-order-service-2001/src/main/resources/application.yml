@@ -7,16 +7,16 @@ spring:
   cloud:
     alibaba:
       seata:
-        #自定义事务组名称需要与seata-server中的对应
+        #自定义事务组名称需要与seata-server中的对应(file.conf文件中vgroup_mapping.my_test_tx_group的值)
         tx-service-group: fsp_tx_group
     nacos:
       discovery:
         server-addr: localhost:8848
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seata_order
+    url: jdbc:mysql://139.196.45.181:3306/seata_order
     username: root
-    password: root
+    password: 111111
 
 feign:
   hystrix:

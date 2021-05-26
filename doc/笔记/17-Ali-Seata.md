@@ -32,7 +32,7 @@ http://seata.io/zh-cn/
 https://github.com/seata/seata/releases
 2. 找到conf下的 file.conf ，修改前请备份
 将 mode 改为 db,代表将日志存储到数据库
-修改数据库账号密码端口为自己的数据库，同时将service标签下的组有default改为自定义组如“my_test”
+修改数据库账号密码端口为自己的数据库，同时将service标签下的组有default改为自定义组如vgroup_mapping.fsp_tx_group = "default"
 找到 register.conf
 将 registry 与 config 里的 type均改为nacos
 同时修改两者下面的 nacos信息，serverAddr = "localhost:8848"

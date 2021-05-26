@@ -205,6 +205,34 @@ CREATE TABLE seata_account.undo_log
 4. 测试http://localhost:2001/order/create?userId=1&productId=1&count=10&money=100
 5. accout加超时，测试出现事务问题，加上@GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)解决事务问题。
 
+原理：
+
+1. TC、TM、RM理解
+
+![image-20210526151856309](imgs\image-20210526151856309.png)
+
+2.流程整理(二段提交)
+
+![image-20210526151950700](\imgs\seata服务流程)
+
+3.AT模式
+
+- 一阶段加载
+
+![image-20210526153506835](imgs\一阶段加载)
+
+
+
+- 二阶段提交
+
+![](imgs\二阶段提交)
+
+- 二阶段回滚
+
+![image-20210526154039142](C:\java\springcloud-2020\doc\笔记\imgs\二阶段回滚)
+
+
+
 
 
 
